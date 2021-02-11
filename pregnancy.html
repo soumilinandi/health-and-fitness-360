@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<title>Health and Fitness 360</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="css/main.css">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+<link type="text/css" rel="Stylesheet" href="http://ajax.microsoft.com/ajax/jquery.ui/1.8.6/themes/smoothness/jquery-ui.css" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+<link rel="stylesheet" href="/resources/demos/style.css">
+<head>
+  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  <script type="text/javascript" src="js/pregnancy.js"></script>
+  <script type="text/javascript" src="js/commonScript.js"></script>
+</head>
+<body>
+
+<!-- Navbar -->
+<div class="w3-top">
+  <div class="w3-bar w3-pale-red w3-card w3-left-align w3-large">
+    <a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-padding-large w3-hover-white w3-large w3-red" href="javascript:void(0);" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
+    <a href="index.html" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Home</a>
+    <a href="menstruation.html" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Menstruation </a>
+    <a href="pregnancy.html" class="w3-bar-item w3-button w3-padding-large w3-white">Pregnancy</a>
+    <a href="Stats.html" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Statistics</a>
+    <a href="UpdateStats.html" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Update Stats</a>
+    <a href="WFHOption1.html" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white ">WFH Edition</a>
+    <a href="i+lgbtq.html" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">i+LGBTQ</a>
+  </div>
+
+
+  <!-- Navbar on small screens -->
+  <div id="navDemo" class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium w3-large">
+    <a href="menstruation.html" class="w3-bar-item w3-button w3-padding-large">Mestruation</a>
+    <a href="pregnancy.html" class="w3-bar-item w3-button w3-padding-large">Pregnancy</a>
+    <a href="Stats.html" class="w3-bar-item w3-button w3-padding-large">Statistics</a>
+    <a href="UpdateStats.html" class="w3-bar-item w3-button w3-padding-large">Update Stats</a>
+    <a href="WFHOption1.html" class="w3-bar-item w3-button w3-padding-large">WFH Edition</a>
+    <a href="i+lgbtq.html" class="w3-bar-item w3-button w3-padding-large">i+LGBTQ</a>
+  </div>
+</div>
+
+
+<!-- First Grid -->
+<div class="w3-row-padding w3-padding-64 w3-container">
+  <div class="w3-content">
+    <div class="w3-twothird">
+      <h3>Track your pregnany:</h3>
+      <!-- Select date of periods -->
+      <h4>Enter start day of your last period :</h4>
+      <input type="text" id="datepicker">
+      <!-- Choose cycle days from options -->
+      <h4 for="days">Choose your cycle length in days:</h4>
+      <select name="days" id="days">
+        <option value="28">28</option>
+        <option value="29">29</option>
+        <option value="30">30</option>
+        <option value="31">31</option>
+        <option value="32">32</option>
+      </select> 
+    </div>
+    <div class="w3-third w3-center">
+      <img src=" css/images/pregnant.jpg" alt="hello beautiful" width="300" height="270">
+    </div>
+  </div>
+  <!-- submit button -->
+  <div class="w3-row-padding w3-padding-64 w3-container">
+    <div class="w3-content">
+      <button class="w3-button w3-black w3-padding-large w3-large w3-margin-top w3-text-white" onclick="submitbutton()">Calculate my due date</button>
+    </div>
+  </div>
+  <!-- display result here -->
+  <div id="resultclass" class = "w3-container w3-center w3-opacity w3-padding-64">
+    <div class="w3-row-padding w3-padding-64 w3-container">
+      <div class="w3-content">
+        <h5>Most pregnancies last around 40 weeks (or 38 weeks from conception), so typically the best way to estimate your due date is to count 40 weeks, or 280 days, from the first day of your last menstrual period (LMP).</h5>
+      </div>
+      <div class="w3-content w3-pale-green">
+        <h4 id="displayDate"></h4>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+<div class="w3-container w3-black w3-center w3-opacity w3-padding-64">
+    <h1 class="w3-margin w3-xlarge">““Going into a pregnancy is a really challenging time for a woman, because it’s forever-changing, both mentally and physically.” – Brooke Burke</h1>
+</div>
+
+<!-- Footer -->
+<footer class="w3-container w3-padding-64 w3-center w3-opacity">  
+  <div class="w3-xlarge w3-padding-32">
+    <i class="fa fa-facebook-official w3-hover-opacity"></i>
+    <i class="fa fa-instagram w3-hover-opacity"></i>
+    <i class="fa fa-snapchat w3-hover-opacity"></i>
+    <i class="fa fa-pinterest-p w3-hover-opacity"></i>
+    <i class="fa fa-twitter w3-hover-opacity"></i>
+    <i class="fa fa-linkedin w3-hover-opacity"></i>
+ </div>
+ <p>Powered by mili</a></p>
+</footer>
+
+</body>
+</html>
+
