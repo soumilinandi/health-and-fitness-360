@@ -10,6 +10,7 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <head>
   <script type="text/javascript" src="js/commonScript.js"></script>
+  <script type="text/javascript" src="js/reminder.js"></script>
 </head>
 <body>
 
@@ -17,7 +18,7 @@
 <div class="w3-top">
   <div class="w3-bar w3-pale-red w3-card w3-left-align w3-large">
     <a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-padding-large w3-hover-white w3-large w3-red" href="javascript:void(0);" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
-    <a href="index.html" class="w3-bar-item w3-button w3-padding-large w3-white">Home</a>
+    <a href="index.html" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Home</a>
     <a href="menstruation.html" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Menstruation </a>
     <a href="pregnancy.html" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Pregnancy</a>
     <a href="Stats.html" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Statistics</a>
@@ -32,45 +33,49 @@
         <a href="reminder.html" class="w3-bar-item w3-button">Set Reminders</a>
         <a href="#" class="w3-bar-item w3-button">LOG OUT</a>
       </div>
-     </div>
+    </div>
   </div>
+  
 
-  <!-- Navbar on small screens -->
-  <div id="navDemo" class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium w3-large">
-    <a href="menstruation.html" class="w3-bar-item w3-button w3-padding-large">Mestruation</a>
-    <a href="pregnancy.html" class="w3-bar-item w3-button w3-padding-large">Pregnancy</a>
-    <a href="Stats.html" class="w3-bar-item w3-button w3-padding-large">Statistics</a>
-    <a href="UpdateStats.html" class="w3-bar-item w3-button w3-padding-large">Update Stats</a>
-    <a href="WFHOption1.html" class="w3-bar-item w3-button w3-padding-large">WFH Edition</a>
-    <a href="i+lgbtq.html" class="w3-bar-item w3-button w3-padding-large">i+LGBTQ</a>
-  </div>
+    <!-- Navbar on small screens -->
+    <div id="navDemo" class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium w3-large">
+        <a href="index.html" class="w3-bar-item w3-button w3-padding-large">Home</a>
+        <a href="menstruation.html" class="w3-bar-item w3-button w3-padding-large">Mestruation</a>
+        <a href="pregnancy.html" class="w3-bar-item w3-button w3-padding-large">Pregnancy</a>
+        <a href="Stats.html" class="w3-bar-item w3-button w3-padding-large">Statistics</a>
+        <a href="UpdateStats.html" class="w3-bar-item w3-button w3-padding-large">Update Stats</a>
+        <a href="WFHOption1.html" class="w3-bar-item w3-button w3-padding-large">WFH Edition</a>
+        <a href="i+lgbtq.html" class="w3-bar-item w3-button w3-padding-large">i+LGBTQ</a>
+    </div>
 </div>
-
 <!-- Header -->
-<header class="w3-container w3-red w3-center" style="padding:128px 16px">
-  <h1 class="w3-margin w3-jumbo line-1 anim-typewriter w3-center w3-text-white">We are now stronger than ever.</h1>
-  <h3 class="w3-margin w3-jumbo w3-center w3-text-white">Empowering every person on the planet to achieve more is our goal here</h3>
-  <p class="w3-xlarge w3-text-white">Come,become a part of us!</p>
-  <button class="w3-button w3-black w3-padding-large w3-large w3-margin-top w3-text-white">Login</button>
+<header class="w3-container w3-grey w3-center" style="padding:128px 16px">
+  <h3 class="w3-margin w3-large w3-center w3-text-white">Add reminders easily : </h3>
+  <h4 class="w3-margin w3-large w3-center w3-text-white">We will remind you on the day of the event!</h4>
+
 </header>
 
-<!-- First Grid -->
+<!-- UNRead Notfications -->
 <div class="w3-row-padding w3-padding-64 w3-container">
   <div class="w3-content">
     <div class="w3-twothird">
-      <h1>How does this work?</h1>
-      <h5 class="w3-padding-32"> The aim of our app is to help you take better care of yourselves. We provide you options for tracking your menstruation Cycle, Pregnancy Cycle, Check your various health statistics, update them from time to time, reminders about check-ups and much more...</h5>
-
-      <p class="w3-text-grey"> Hey, you have been working really hard and acing all your jobs in this past one year. We want you take some extra care of yourselves and look out for each other. Check out our WFH edition where we help you stay fit mentally and physically in this tough times. Some additional superpowers for this superwoman won't hurt much ;) For more details on some additional information for our very dear LGBTQ community is one tap away in the i&LGBTQ section. Remember, we are here to empower eachother every single day!
-      </p>
+      <h2>Add Notifications : </h2>
+      <h4>Enter date : </h4>
+      <input type="text" id="datepicker">
+      <h4 class="w3-padding-32">Enter Reminder title :</h4>
+      <input type="text" id="reminder_title" name="reminder_title"><br>
+      <h4 class="w3-padding-32">Enter more details :</h4>
+      <textarea id="reminder" name="reminder"></textarea><br>  
+      <button id="addreminder" class="w3-button w3-black w3-padding-large w3-large w3-margin-top w3-text-white" onclick="displayData()">Add</button>
+      <h5 id="displayresult"></h5>
     </div>
 
+    <!-- attach image -->
     <div class="w3-third w3-center">
-        <img src=" css/images/index_image.jpg" alt="hello beautiful" width="400" height="400">
+        <img src="css/images/reminder.jpg" alt="hello beautiful" width="400" height="400">
     </div>
   </div>
 </div>
-
 
 
 <div class="w3-container w3-black w3-center w3-opacity w3-padding-64">

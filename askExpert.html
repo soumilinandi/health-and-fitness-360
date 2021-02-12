@@ -17,14 +17,14 @@
 <div class="w3-top">
   <div class="w3-bar w3-pale-red w3-card w3-left-align w3-large">
     <a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-padding-large w3-hover-white w3-large w3-red" href="javascript:void(0);" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
-    <a href="index.html" class="w3-bar-item w3-button w3-padding-large w3-white">Home</a>
+    <a href="index.html" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Home</a>
     <a href="menstruation.html" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Menstruation </a>
     <a href="pregnancy.html" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Pregnancy</a>
     <a href="Stats.html" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Statistics</a>
     <a href="UpdateStats.html" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Update Stats</a>
     <a href="WFHOption1.html" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white ">WFH Edition</a>
     <a href="i+lgbtq.html" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">i+LGBTQ</a>
-    <a href="askExpert.html" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Expert Advice</a>
+    <a href="askExpert.html" class="w3-bar-item w3-button w3-padding-large w3-white">Expert Advice</a>
     <div class="w3-dropdown-hover w3-right">
       <button class="btn"><i class="fa fa-bars w3-xxlarge "></i></button>
       <div class="w3-dropdown-content w3-bar-block w3-card-4" style="right:0">
@@ -32,7 +32,7 @@
         <a href="reminder.html" class="w3-bar-item w3-button">Set Reminders</a>
         <a href="#" class="w3-bar-item w3-button">LOG OUT</a>
       </div>
-     </div>
+    </div>
   </div>
 
   <!-- Navbar on small screens -->
@@ -43,38 +43,53 @@
     <a href="UpdateStats.html" class="w3-bar-item w3-button w3-padding-large">Update Stats</a>
     <a href="WFHOption1.html" class="w3-bar-item w3-button w3-padding-large">WFH Edition</a>
     <a href="i+lgbtq.html" class="w3-bar-item w3-button w3-padding-large">i+LGBTQ</a>
+    <a href="askExpert.html" class="w3-bar-item w3-button w3-padding-large">Expert Advice</a>
   </div>
 </div>
 
 <!-- Header -->
 <header class="w3-container w3-red w3-center" style="padding:128px 16px">
-  <h1 class="w3-margin w3-jumbo line-1 anim-typewriter w3-center w3-text-white">We are now stronger than ever.</h1>
-  <h3 class="w3-margin w3-jumbo w3-center w3-text-white">Empowering every person on the planet to achieve more is our goal here</h3>
-  <p class="w3-xlarge w3-text-white">Come,become a part of us!</p>
-  <button class="w3-button w3-black w3-padding-large w3-large w3-margin-top w3-text-white">Login</button>
+  <h3 class="w3-margin w3-jumbo w3-center w3-text-white">You can ask anything here...</h3>
+  <p class="w3-xlarge w3-text-white">Only experts can answer your questions, what are you waiting for?</p>
 </header>
 
 <!-- First Grid -->
 <div class="w3-row-padding w3-padding-64 w3-container">
-  <div class="w3-content">
-    <div class="w3-twothird">
-      <h1>How does this work?</h1>
-      <h5 class="w3-padding-32"> The aim of our app is to help you take better care of yourselves. We provide you options for tracking your menstruation Cycle, Pregnancy Cycle, Check your various health statistics, update them from time to time, reminders about check-ups and much more...</h5>
+    <div class="w3-content">
+        <div class="w3-twothird w3-center">
+            <h1>What is your question?</h1>
+            <textarea id="question" name="question"></textarea><br>
+            <p class="w3-text-grey">Our experts will try to answer your query within next 24 hours, see you soon!</p>
+            <button class="w3-button w3-black w3-padding-large w3-large w3-margin-top w3-text-white">Post</button>
+        </div>
 
-      <p class="w3-text-grey"> Hey, you have been working really hard and acing all your jobs in this past one year. We want you take some extra care of yourselves and look out for each other. Check out our WFH edition where we help you stay fit mentally and physically in this tough times. Some additional superpowers for this superwoman won't hurt much ;) For more details on some additional information for our very dear LGBTQ community is one tap away in the i&LGBTQ section. Remember, we are here to empower eachother every single day!
-      </p>
+        <div class="w3-third w3-center">
+            <img src="css/images/expert.jpg" alt="hello beautiful" width="400" height="400">
+        </div>
     </div>
+</div>
 
-    <div class="w3-third w3-center">
-        <img src=" css/images/index_image.jpg" alt="hello beautiful" width="400" height="400">
+<!-- First Grid -->
+<div class="w3-row-padding w3-pale-green w3-padding-64 w3-container">
+    <div class="w3-content">
+        <h1>See your previous questions :</h1>
+        <div id="questions">
+            <div id="question 1">
+                <h3>How long should I take pill ABC if I have sugar problem?</h3>
+                <p class="w3-text-grey">You should take pill A once everyday, and try doing more exercise! - Swati</p>
+            </div>
+            <div id="question 2">
+                <h3>I am hoping to lose 5 kgs in 1 month, can I do it without diet?</h3>
+                <p class="w3-text-grey">Your ideal plan should be consuming 200 calories/day and add 3 exercise session on 20 mins everyday! - Neha</p>
+            </div>
+        </div>
+      
     </div>
-  </div>
 </div>
 
 
-
 <div class="w3-container w3-black w3-center w3-opacity w3-padding-64">
-    <h1 class="w3-margin w3-xlarge">“Physical fitness is the first requisite of happiness.” – Joseph Pilates.</h1>
+    <h1 class="w3-margin w3-xlarge">“Don't be afraid to ask questions. Don't be afraid to ask for help when you need it. I do that every day. Asking for help isn't a sign of weakness, it's a sign of strength. It shows you have the courage to admit when you don't know something, and to learn something new" - Barack Obama .</h1>
 </div>
 
 <!-- Footer -->
