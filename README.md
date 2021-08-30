@@ -1,7 +1,6 @@
 # health-and-fitness-360
 Web app to facilitate fitness and health assistance to women all around the world!
-</br> Check out the app deployed on heroku - https://health-and-fitness-360.herokuapp.com
-</br> Demo Link - https://youtu.be/hQkiYPL5uzc
+</br> Check out the app deployed on heroku
 ---
 ### Features  :
 
